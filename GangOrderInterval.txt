@@ -42,14 +42,11 @@ gang_order_interval_drop = map_range_clamped(gang_satisfaction_percentage, 0.0, 
 # gang order interval with drop
 gang_order_interval_with_drop = gang_order_interval * (1 - gang_interval_max_drop * gang_level / gang_max_level) * (1 - gang_order_interval_drop)
 
-
 # Total gang order interval mins converted from gang_order_interval_with_drop (secs)
 gangordermins=gang_order_interval_with_drop/60
 
 # Total gang order hours converted from gangordermins
 gangorderhours=gang_order_interval_with_drop/60/60
-
-nextordertime = math.floor(gangorderhours)
 nextordertime = math.floor(gangorderhours)
 minutesleft= round((gangorderhours % 1) * 60)
 
