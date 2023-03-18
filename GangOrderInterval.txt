@@ -1,0 +1,64 @@
+import math
+
+# Set the values of the variables
+gang_max_level = 10
+gang_interval_max_drop = 0.3
+gang_order_interval = 36000.0
+
+# Validate the gang level input
+while True:
+    gang_level = input("Gang Level : ")
+    try:
+        gang_level = int(gang_level)
+        if gang_level < 0:
+            raise ValueError
+        break
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+
+gang_satisfaction_max = 1000
+
+# Validate the gang satisfaction input
+while True:
+    gang_satisfaction = input("Gang Satisfaction: ")
+    try:
+        gang_satisfaction = int(gang_satisfaction)
+        if gang_satisfaction < 0:
+            raise ValueError
+        break
+    except ValueError:
+        print("Invalid input. Please enter a non-negative integer.")
+
+# Define the map_range_clamped function
+def map_range_clamped(value, in_min, in_max, out_min, out_max):
+    return max(out_min, min(out_max, (value - in_min) / (in_max - in_min) * (out_max - out_min) + out_min))
+
+# gang satisfaction percentage
+gang_satisfaction_percentage = map_range_clamped(int(gang_satisfaction) / int(gang_satisfaction_max), 0.0, 1.0, 0.0, 1.0)
+
+# gang order interval drop
+gang_order_interval_drop = map_range_clamped(gang_satisfaction_percentage, 0.0, 1.0, 0.0, gang_interval_max_drop)
+
+# gang order interval with drop
+gang_order_interval_with_drop = gang_order_interval * (1 - gang_interval_max_drop * gang_level / gang_max_level) * (1 - gang_order_interval_drop)
+
+
+# Total gang order interval mins converted from gang_order_interval_with_drop (secs)
+gangordermins=gang_order_interval_with_drop/60
+
+# Total gang order hours converted from gangordermins
+gangorderhours=gang_order_interval_with_drop/60/60
+
+nextordertime = math.floor(gangorderhours)
+nextordertime = math.floor(gangorderhours)
+minutesleft= round((gangorderhours % 1) * 60)
+
+# Print the results
+print("Gang Satisfaction Percentage: ", gang_satisfaction_percentage)
+print("Gang Max Level: ", gang_max_level)
+print("Gang Order Interval: ", gang_order_interval)
+print("Gang Order Interval Drop: ", gang_order_interval_drop)
+print("Gang Interval Max Drop: ", gang_interval_max_drop)
+print("Gang Order (secs): ", gang_order_interval_with_drop)
+print("\nNext Order In: ",nextordertime," Hours, ",minutesleft," Minutes.")
+
