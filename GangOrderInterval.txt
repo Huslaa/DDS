@@ -6,18 +6,21 @@ gang_interval_max_drop = 0.3
 gang_order_interval = 36000.0
 gang_satisfaction_max = 1000
 
+
 # Define the map_range_clamped function
 def map_range_clamped(value, in_min, in_max, out_min, out_max):
     return max(out_min, min(out_max, (value - in_min) / (in_max - in_min) * (out_max - out_min) + out_min))
 
+
 while True:
-    gang_level = input ("Gang Level: ")
+    gang_level = input("Gang Level: ")
     if not gang_level.isdigit() or not int(gang_level) > 0 or not int(gang_level) <= gang_max_level:
         print("Invalid input for gang level. Please enter a valid integer between 1 and", gang_max_level)
         continue
 
     gang_satisfaction = input("Gang Satisfaction / XP: ")
-    if not gang_satisfaction.isdigit() or not int(gang_satisfaction) >= 0 or not int(gang_satisfaction) <= gang_satisfaction_max:
+    if not gang_satisfaction.isdigit() or not int(gang_satisfaction) >= 0 or not int(
+            gang_satisfaction) <= gang_satisfaction_max:
         print("Invalid input for gang satisfaction. Please enter a valid integer between 0 and", gang_satisfaction_max)
         continue
 
@@ -25,21 +28,23 @@ while True:
     gang_level = int(gang_level)
 
     # gang satisfaction percentage
-    gang_satisfaction_percentage = map_range_clamped(int(gang_satisfaction) / int(gang_satisfaction_max), 0.0, 1.0, 0.0, 1.0)
+    gang_satisfaction_percentage = map_range_clamped(int(gang_satisfaction) / int(gang_satisfaction_max), 0.0, 1.0, 0.0,
+                                                     1.0)
 
     # gang order interval drop
     gang_order_interval_drop = map_range_clamped(gang_satisfaction_percentage, 0.0, 1.0, 0.0, gang_interval_max_drop)
 
     # gang order interval with drop
-    gang_order_interval_with_drop = gang_order_interval * (1 - gang_interval_max_drop * gang_level / gang_max_level) * (1 - gang_order_interval_drop)
+    gang_order_interval_with_drop = gang_order_interval * (1 - gang_interval_max_drop * gang_level / gang_max_level) * (
+                1 - gang_order_interval_drop)
 
     # Total gang order interval mins converted from gang_order_interval_with_drop (secs)
-    gangordermins=gang_order_interval_with_drop/60
+    gangordermins = gang_order_interval_with_drop / 60
 
     # Total gang order hours converted from gangordermins
-    gangorderhours=gang_order_interval_with_drop/60/60
+    gangorderhours = gang_order_interval_with_drop / 60 / 60
     nextordertime = math.floor(gangorderhours)
-    minutesleft= round((gangorderhours % 1) * 60)
+    minutesleft = round((gangorderhours % 1) * 60)
 
     # Print the results
     print("Gang Satisfaction Percentage: ", gang_satisfaction_percentage)
@@ -48,6 +53,6 @@ while True:
     print("Gang Order Interval Drop: ", gang_order_interval_drop)
     print("Gang Interval Max Drop: ", gang_interval_max_drop)
     print("Gang Order (secs): ", gang_order_interval_with_drop)
-    print("\nNext Order In: ",nextordertime," Hours, ",minutesleft," Minutes.")
+    print("\nNext Order In: ", nextordertime, " Hours, ", minutesleft, " Minutes.")
 
     break
