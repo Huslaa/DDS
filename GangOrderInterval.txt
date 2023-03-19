@@ -4,30 +4,18 @@ import math
 gang_max_level = 10
 gang_interval_max_drop = 0.3
 gang_order_interval = 36000.0
-
-# Validate the gang level input
-while True:
-    gang_level = input("Gang Level : ")
-    try:
-        gang_level = int(gang_level)
-        if gang_level < 0:
-            raise ValueError
-        break
-    except ValueError:
-        print("Invalid input. Please enter a non-negative integer.")
-
 gang_satisfaction_max = 1000
 
-# Validate the gang satisfaction input
-while True:
-    gang_satisfaction = input("Gang Satisfaction: ")
-    try:
-        gang_satisfaction = int(gang_satisfaction)
-        if gang_satisfaction < 0:
-            raise ValueError
-        break
-    except ValueError:
-        print("Invalid input. Please enter a non-negative integer.")
+def get_non_negative_integer_input(prompt):
+    while True:
+        user_input = input(prompt)
+        if user_input.isdigit() and int(user_input) >= 0:
+            return int(user_input)
+        else:
+            print("Invalid input. Please enter a non-negative integer.")
+
+gang_level = get_non_negative_integer_input("Gang Level : ")
+gang_satisfaction = get_non_negative_integer_input("Gang Satisfaction: ")
 
 # Define the map_range_clamped function
 def map_range_clamped(value, in_min, in_max, out_min, out_max):
