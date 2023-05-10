@@ -1,0 +1,778 @@
+{
+  "Script": [
+    {
+      "Inst": "PushExecutionFlow",
+      "Offset": 1284,
+      "StatementIndex": 0
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.Temp_int_Loop_Counter_Variable"
+      },
+      "Expression": {
+        "Inst": "IntConst",
+        "Value": 0
+      },
+      "StatementIndex": 5
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+      },
+      "Expression": {
+        "Inst": "IntConst",
+        "Value": 0
+      },
+      "StatementIndex": 28
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Array_Length_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "Context",
+        "Context": {
+          "Inst": "ObjectConst",
+          "Object": "/Script/Engine.Default__KismetArrayLibrary"
+        },
+        "SkipOffsetForNull": 19,
+        "RValuePropertyOuter": "salesManager_C",
+        "RValuePropertyName": "countMaxDealers.CallFunc_Array_Length_ReturnValue",
+        "Expression": {
+          "Inst": "FinalFunction",
+          "Function": "Array_Length",
+          "Parameters": [
+            {
+              "Inst": "InstanceVariable",
+              "Variable Outer": "salesManager_C",
+              "Variable Name": "clientIsDealer"
+            }
+          ]
+        }
+      },
+      "StatementIndex": 51
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Less_IntInt_ReturnValue1"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Less_IntInt",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Loop_Counter_Variable"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Length_ReturnValue"
+          }
+        ]
+      },
+      "StatementIndex": 110
+    },
+    {
+      "Inst": "JumpIfNot",
+      "Offset": 801,
+      "Condition": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Less_IntInt_ReturnValue1"
+      },
+      "StatementIndex": 148
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+      },
+      "Expression": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.Temp_int_Loop_Counter_Variable"
+      },
+      "StatementIndex": 162
+    },
+    {
+      "Inst": "PushExecutionFlow",
+      "Offset": 1210,
+      "StatementIndex": 189
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "clientsLost"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item"
+          }
+        ]
+      },
+      "StatementIndex": 194
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "ClientsLabCrew"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item1"
+          }
+        ]
+      },
+      "StatementIndex": 253
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Not_PreBool_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Not_PreBool",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item"
+          }
+        ]
+      },
+      "StatementIndex": 312
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Not_PreBool_ReturnValue1"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Not_PreBool",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item1"
+          }
+        ]
+      },
+      "StatementIndex": 341
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "clientsAssignedArea"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item3"
+          }
+        ]
+      },
+      "StatementIndex": 370
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "clientsAssignedArea"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.ClientID"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item4"
+          }
+        ]
+      },
+      "StatementIndex": 429
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_EqualEqual_StrStr_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "Context",
+        "Context": {
+          "Inst": "ObjectConst",
+          "Object": "/Script/Engine.Default__KismetStringLibrary"
+        },
+        "SkipOffsetForNull": 28,
+        "RValuePropertyOuter": "salesManager_C",
+        "RValuePropertyName": "countMaxDealers.CallFunc_EqualEqual_StrStr_ReturnValue",
+        "Expression": {
+          "Inst": "FinalFunction",
+          "Function": "EqualEqual_StrStr",
+          "Parameters": [
+            {
+              "Inst": "LocalVariable",
+              "Variable Outer": "salesManager_C",
+              "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item3"
+            },
+            {
+              "Inst": "LocalVariable",
+              "Variable Outer": "salesManager_C",
+              "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item4"
+            }
+          ]
+        }
+      },
+      "StatementIndex": 488
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "clientIsDealer"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Array_Index_Variable"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item6"
+          }
+        ]
+      },
+      "StatementIndex": 548
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "BooleanAND",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item6"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_EqualEqual_StrStr_ReturnValue"
+          }
+        ]
+      },
+      "StatementIndex": 607
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue1"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "BooleanAND",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Not_PreBool_ReturnValue1"
+          }
+        ]
+      },
+      "StatementIndex": 645
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue2"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "BooleanAND",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue1"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Not_PreBool_ReturnValue"
+          }
+        ]
+      },
+      "StatementIndex": 683
+    },
+    {
+      "Inst": "PopExecutionFlowIfNot",
+      "Condition": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_BooleanAND_ReturnValue2"
+      },
+      "StatementIndex": 721
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Add_IntInt_ReturnValue1"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Add_IntInt",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.countedNum"
+          },
+          {
+            "Inst": "IntConst",
+            "Value": 1
+          }
+        ]
+      },
+      "StatementIndex": 731
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.countedNum"
+      },
+      "Expression": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Add_IntInt_ReturnValue1"
+      },
+      "StatementIndex": 773
+    },
+    {
+      "Inst": "PopExecutionFlow",
+      "StatementIndex": 800
+    },
+    {
+      "Inst": "SetArray",
+      "LeftSideExpression": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_GetAllActorsOfClass_OutActors"
+      },
+      "Values": [],
+      "StatementIndex": 801
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__GameplayStatics"
+      },
+      "SkipOffsetForNull": 29,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "GetAllActorsOfClass",
+        "Parameters": [
+          {
+            "Inst": "Self"
+          },
+          {
+            "Inst": "ObjectConst",
+            "Object": "/Game/TerritorySpraying/saleAreaManager.saleAreaManager_C"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_GetAllActorsOfClass_OutActors"
+          }
+        ]
+      },
+      "StatementIndex": 812
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 33,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_GetAllActorsOfClass_OutActors"
+          },
+          {
+            "Inst": "IntConst",
+            "Value": 0
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item2"
+          }
+        ]
+      },
+      "StatementIndex": 863
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 37,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "InstanceVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "clientsAssignedArea"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.ClientID"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item4"
+          }
+        ]
+      },
+      "StatementIndex": 918
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Array_Find_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "Context",
+        "Context": {
+          "Inst": "ObjectConst",
+          "Object": "/Script/Engine.Default__KismetArrayLibrary"
+        },
+        "SkipOffsetForNull": 50,
+        "RValuePropertyOuter": "salesManager_C",
+        "RValuePropertyName": "countMaxDealers.CallFunc_Array_Find_ReturnValue",
+        "Expression": {
+          "Inst": "FinalFunction",
+          "Function": "Array_Find",
+          "Parameters": [
+            {
+              "Inst": "Context",
+              "Context": {
+                "Inst": "LocalVariable",
+                "Variable Outer": "salesManager_C",
+                "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item2"
+              },
+              "SkipOffsetForNull": 9,
+              "RValuePropertyOuter": "/Game/TerritorySpraying/saleAreaManager",
+              "RValuePropertyName": "saleAreaManager_C.saleAreaStrings",
+              "Expression": {
+                "Inst": "InstanceVariable",
+                "Variable Outer": "/Game/TerritorySpraying/saleAreaManager",
+                "Variable Name": "saleAreaManager_C.saleAreaStrings"
+              }
+            },
+            {
+              "Inst": "LocalVariable",
+              "Variable Outer": "salesManager_C",
+              "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item4"
+            }
+          ]
+        }
+      },
+      "StatementIndex": 977
+    },
+    {
+      "Inst": "Context",
+      "Context": {
+        "Inst": "ObjectConst",
+        "Object": "/Script/Engine.Default__KismetArrayLibrary"
+      },
+      "SkipOffsetForNull": 59,
+      "RValuePropertyOuter": "#Pointer Error#",
+      "RValuePropertyName": "^^^^^",
+      "Expression": {
+        "Inst": "FinalFunction",
+        "Function": "Array_Get",
+        "Parameters": [
+          {
+            "Inst": "Context",
+            "Context": {
+              "Inst": "LocalVariable",
+              "Variable Outer": "salesManager_C",
+              "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item2"
+            },
+            "SkipOffsetForNull": 9,
+            "RValuePropertyOuter": "/Game/TerritorySpraying/saleAreaManager",
+            "RValuePropertyName": "saleAreaManager_C.SaleAreaDealersMax",
+            "Expression": {
+              "Inst": "InstanceVariable",
+              "Variable Outer": "/Game/TerritorySpraying/saleAreaManager",
+              "Variable Name": "saleAreaManager_C.SaleAreaDealersMax"
+            }
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Find_ReturnValue"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item5"
+          }
+        ]
+      },
+      "StatementIndex": 1067
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Less_IntInt_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Less_IntInt",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.countedNum"
+          },
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.CallFunc_Array_Get_Item5"
+          }
+        ]
+      },
+      "StatementIndex": 1148
+    },
+    {
+      "Inst": "LetBool",
+      "Variable": {
+        "Inst": "LocalOutVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CanHaveMore"
+      },
+      "Expression": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Less_IntInt_ReturnValue"
+      },
+      "StatementIndex": 1186
+    },
+    {
+      "Inst": "Jump",
+      "Offset": 1284,
+      "StatementIndex": 1205
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Add_IntInt_ReturnValue"
+      },
+      "Expression": {
+        "Inst": "CallMath",
+        "Function": "Add_IntInt",
+        "ContextClass": "/Script/Engine.KismetMathLibrary",
+        "Parameters": [
+          {
+            "Inst": "LocalVariable",
+            "Variable Outer": "salesManager_C",
+            "Variable Name": "countMaxDealers.Temp_int_Loop_Counter_Variable"
+          },
+          {
+            "Inst": "IntConst",
+            "Value": 1
+          }
+        ]
+      },
+      "StatementIndex": 1210
+    },
+    {
+      "Inst": "Let",
+      "Variable": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.Temp_int_Loop_Counter_Variable"
+      },
+      "Expression": {
+        "Inst": "LocalVariable",
+        "Variable Outer": "salesManager_C",
+        "Variable Name": "countMaxDealers.CallFunc_Add_IntInt_ReturnValue"
+      },
+      "StatementIndex": 1252
+    },
+    {
+      "Inst": "Jump",
+      "Offset": 51,
+      "StatementIndex": 1279
+    },
+    {
+      "Inst": "Return",
+      "Expression": {
+        "Inst": "Nothing"
+      },
+      "StatementIndex": 1284
+    },
+    {
+      "Inst": "EndOfScript",
+      "StatementIndex": 1286
+    }
+  ]
+}
